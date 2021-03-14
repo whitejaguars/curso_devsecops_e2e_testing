@@ -1,5 +1,13 @@
 {
+  "name": "dynamic-tests",
+  "version": "1.0.0",
+  "description": "Create Cypress tests dynamically from data",
   "scripts": {
-    "cy:run": "cypress run"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test:ci": "npm run cypress:run",
+    "test:ci:record": "npm run cypress:run -- --record",
+    "test:ci:windows": "bin-up cypress run",
+    "test:ci:windows:record": "bin-up cypress run --record --group dynamic-tests"
   }
 }
